@@ -1,3 +1,4 @@
+import time
 import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
@@ -20,6 +21,8 @@ y /= (np.max(y) - np.min(y))
 
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.2)
 
-network = MLPRegressor(solver='adam', hidden_layer_sizes=(500, 500), max_iter = 50000, tol = 0.0001, activation = 'tanh')
+network = MLPRegressor(solver='adam', hidden_layer_sizes=(1000, 1000, 1000), max_iter = 5000, tol = 0.0001, activation = 'tanh')
+start_time = time.time()
 network.fit(X_train, y_train)
+print("--- %s seconds ---" % (time.time() - start_time))
 print(network.score(X_test, y_test))
