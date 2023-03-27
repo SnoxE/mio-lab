@@ -29,9 +29,9 @@ plt.plot(x, y_predicted, "r")
 plt.plot(x, betterapprox(x, network), "g")
 plt.show()
 
-# print(network.coefs_)
+print(network.coefs_)
 # print(network.coefs_[0][0][0], network.coefs_[0][0][1], network.coefs_[0][0][2])
 # print(network.coefs_[1][0][0],  network.coefs_[1][1][0], network.coefs_[1][2][0])
-# print(network.intercepts_)
+print(network.intercepts_)
 
 # print(network.intercepts_[1][0])
